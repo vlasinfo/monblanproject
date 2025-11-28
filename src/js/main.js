@@ -1,6 +1,8 @@
-// // main.js
-// import initHeader from './modules/header.js';
+// main.js
+import initDatepicker from './modules/initDatepicker.js';
+import initViewSwitcher from './modules/initViewSwitcher.js';
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   initHeader();
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  initDatepicker();
+  initViewSwitcher();
+});

@@ -8,8 +8,8 @@
 .header {
   position: relative;
   width: 100%;
-  max-width: rem(1440px);
-  height: rem(172px);
+  max-width: var(--site-width);
+  // height: rem(172px);
   margin: 0 auto;
 
   background: rgba(255, 255, 255, 0.67);
@@ -25,6 +25,7 @@
   &__content {
     @include flex-center-y;
     height: 100%;
+    padding: 20px 0 21px;
   }
 
   &__logo {
@@ -33,12 +34,41 @@
     justify-content: flex-end;
     width: 50%;
     max-width: rem(630px);
-    padding-right: 130px;
+    padding-right: rem(70px);
+
+    @include media-query-min(rem(600px)) {
+      padding-right: rem(130px);
+    } 
 
     a {
       display: block;
 
     }
+  }
+
+  &__info {
+    margin-left: -50px;
+
+
+    &-row {
+      @include flex-center-y;
+      flex-wrap: wrap;
+      gap: rem(16px);
+
+      &:not(:last-child) {
+        margin-bottom: rem(15px);
+      }
+    }
+
+  }
+
+  &__title {
+    font-family: var(--font-family-secondary);
+    font-weight: 500;
+    font-size: rem(24px);
+    line-height: rem(29px);
+    letter-spacing: -0.01em;
+    margin: 0;
   }
 
   &__vector {
@@ -52,9 +82,9 @@
     z-index: -1;
 
     // Column wrapper
-    &-col {
+    &-col { 
       position: absolute;
-      right: 0;
+      right: rem(5px);
 
       width: rem(630px);
       height: rem(400px);
@@ -69,4 +99,34 @@
       display: block;
     }
   }
+
+}
+
+
+.profile-stats {
+    @include flex-center-y;
+    flex-wrap: wrap;
+    gap: rem(16px);
+
+    &__item {
+
+    }
+    
+    &__value {
+      font-weight: 700;
+    }
+
+    &__label {
+      
+    }
+
+
+}
+
+main {
+  margin: 0 auto;
+  max-width: var(--site-width);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 172px);
 }

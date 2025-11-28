@@ -1,28 +1,51 @@
 
+@use "./../mixins/rem" as *;
+
 .btn {
     display: inline-block;
     font-family: var(--font-general);
     font-weight: 400;
-    font-size: 16px;
+    font-size: rem(13px);
     background: transparent;
-    padding: 9px 26px;
-    color: var(--tp-common-white);
+    padding: rem(5px) rem(9px);
+    color: var(--color-text);
     border: 1px solid var(--color-text);
+    border-radius: rem(2px);
     transition: var(--transition);
-
-    &-small {
-        font-size: 14px;
-        padding: 4px 10px;
-    }
+    filter: drop-shadow(0px rem(4px) rem(4px) rgba(0, 0, 0, 0.25));
 
     &:hover {
         background-color: var(--color-accent-primary);
         border-color: var(--color-accent-primary);
-        color: #fff;
+        color: white;
+    }    
+
+    &--active {
+        color: var(--color-accent-active);
+        border: 1px solid var(--color-accent-active);
+
+        &:hover {
+            background-color: var(--color-accent-active);
+            border-color: var(--color-accent-active);
+            color: white;
+        }
     }
 
-    svg {
-        width: 12px;
-        margin-left: 2px;
+    &--load-more {
+        color: var(--color-btn-light);
+        border: rem(1px) solid var(--color-btn-light);
+        border-radius: rem(14px);
+        padding: rem(8px) rem(24px);
+
+        &:hover {
+            color: var(--color-accent-active);
+            border-color: var(--color-accent-active);
+            background-color: transparent;
+        }
     }
+}
+
+.btn-wrap {
+    margin-top: rem(16px);
+    text-align: center;
 }

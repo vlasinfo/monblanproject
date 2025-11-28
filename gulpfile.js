@@ -29,10 +29,10 @@ const paths = {
   html:    { src: 'src/html/*.html', watch: 'src/html/**/*.html', dest: 'dist/' },
   vendors: {
     css: [
-      'node_modules/swiper/swiper-bundle.min.css'
+      'node_modules/flatpickr/dist/flatpickr.min.css'
     ],
     js: [
-      ' '
+      'node_modules/flatpickr/dist/flatpickr.min.js'
     ]
   }
 };

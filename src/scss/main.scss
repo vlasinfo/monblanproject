@@ -3,10 +3,10 @@
 @use "base/reboot";
 @use "base/fonts";
 @use "base/buttons";
-@use "base/cursor";
 
 // Components
-@use "components/preloader";
 @use "components/hero";
 @use "components/header";
+@use "components/datepicker";
+@use "components/articles";
 @use "components/footer";
