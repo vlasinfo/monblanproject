@@ -18,11 +18,11 @@
 | Task               | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
 | `npm run dev:html` | Runs Gulp in **HTML mode**, compiles HTML includes, Sass, JS, and watches changes. |
-| `npm run build`    | Compiles and minifies all assets for production → `build/`.                        |
-| Sass               | Compiles `src/scss/**/*.scss` → `build/assets/css/`                                |
-| JS                 | Bundles and minifies `src/js/**/*.js` → `build/assets/js/`                         |
-| Images             | Optimizes images from `src/img/` → `build/assets/img/`                             |
-| HTML               | html files `src/html/` and html partials from `src/html/partials/` → `build/`      |
+| `npm run build`    | Compiles and minifies all assets for production → `dist/`.                        |
+| Sass               | Compiles `src/scss/**/*.scss` → `dist/assets/css/`                                |
+| JS                 | Bundles and minifies `src/js/**/*.js` → `dist/assets/js/`                         |
+| Images             | Optimizes images from `src/img/` → `dist/assets/img/`                             |
+| HTML               | html files `src/html/` and html partials from `src/html/partials/` → `dist/`       |
 
 ## 📁 Folder Structure Overview
 
@@ -33,6 +33,6 @@
 ├─ 📁img/         # Images
 ├─ 📁html/        # HTML files
 │  └─ 📁partials/ # HTML includes
-📁build/          # Compiled files for production
+📁dist/           # Compiled files for production
 
 ```
