@@ -1,0 +1,55 @@
+@use "./../mixins/rem" as *;
+
+// ------------------------------------------------------
+//  SCSS VARIABLES (for calculations inside SCSS)
+// ------------------------------------------------------
+
+$font-size-base: rem(16px);
+$line-height-base: rem(24px);
+
+$container-large: rem(836px);
+$container-mobile: rem(600px);
+
+$font-size: rem(14px);
+$line-height: rem(22px);
+
+// ------------------------------------------------------
+//  CSS ROOT VARIABLES (GLOBAL TOKENS)
+// ------------------------------------------------------
+
+:root {
+  // --------------------
+  // TYPOGRAPHY
+  // --------------------
+  --font-size-base: 16px; // browser default fallback
+  --font-size: #{$font-size-base};
+  --line-height: #{$line-height-base};
+
+  --font-weight: 400;
+
+  --font-family-primary: "Roboto", sans-serif;
+  --font-family-secondary: "Montserrat", sans-serif;
+  
+  --font-size: #{$font-size};
+  --line-height: #{$line-height};
+
+  // --------------------
+  // COLORS
+  // --------------------
+  --color-text: #000000;
+  --color-accent-primary: #40AF79;
+  --color-accent-secondary: #124757;
+  --color-light: #FAFAFA;
+
+  // --------------------
+  // LAYOUT
+  // --------------------
+  --container-large: #{$container-large};
+  --container-mobile: #{$container-mobile};
+
+  // --------------------
+  // EFFECTS
+  // --------------------
+  --transition-default: 0.24s;
+  --gradient-primary: linear-gradient(235.02deg, #40AF79 8.03%, #124757 90.34%);
+}

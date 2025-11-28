@@ -1,0 +1,72 @@
+@use "mixins/rem" as *;
+@use "mixins/includes" as *;
+@use "mixins/media-query" as *;
+
+// ===============================
+// HEADER
+// ===============================
+.header {
+  position: relative;
+  width: 100%;
+  max-width: rem(1440px);
+  height: rem(172px);
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.67);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.12),
+    inset 0 12px 24px rgba(0, 0, 0, 0.12);
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__content {
+    @include flex-center-y;
+    height: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    max-width: rem(630px);
+    padding-right: 130px;
+
+    a {
+      display: block;
+
+    }
+  }
+
+  &__vector {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 50%;
+    max-width: rem(630px);
+    height: rem(401px);
+
+    overflow: hidden;
+    z-index: -1;
+
+    // Column wrapper
+    &-col {
+      position: absolute;
+      right: 0;
+
+      width: rem(630px);
+      height: rem(400px);
+    }
+
+    // SVG/IMG
+    &-img {
+      position: absolute;
+      top: 0;
+      width: rem(630px);
+      height: rem(400px);
+      display: block;
+    }
+  }
+}
